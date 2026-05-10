@@ -1,0 +1,801 @@
+/* ============================================================
+   PORTFÓLIO PESSOAL - ESTILOS CSS
+   Arquivo de estilos principal (sem frameworks)
+   ============================================================ */
+
+/* ---------- RESET BÁSICO ---------- */
+/* Remove margens e paddings padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- VARIÁVEIS DE CORES (TEMA CLARO) ---------- */
+/* Usamos variáveis CSS para facilitar a troca de tema */
+:root {
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #f5f5f5;
+  --cor-texto: #333333;
+  --cor-texto-claro: #666666;
+  --cor-primaria: #4a6cf7;
+  --cor-primaria-hover: #3a5ce5;
+  --cor-borda: #e0e0e0;
+  --cor-card: #ffffff;
+  --sombra-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- VARIÁVEIS DE CORES (TEMA ESCURO) ---------- */
+/* Quando a classe "tema-escuro" é adicionada ao body, as cores mudam */
+body.tema-escuro {
+  --cor-fundo: #1a1a2e;
+  --cor-fundo-alt: #16213e;
+  --cor-texto: #e0e0e0;
+  --cor-texto-claro: #aaaaaa;
+  --cor-primaria: #6c83f7;
+  --cor-primaria-hover: #5a73e5;
+  --cor-borda: #2a2a4a;
+  --cor-card: #1f1f3a;
+  --sombra-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- ESTILOS GERAIS ---------- */
+html {
+  scroll-behavior: smooth; /* Rolagem suave ao clicar nos links do menu */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s; /* Transição suave ao trocar tema */
+}
+
+/* Container centralizado com largura máxima */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Links sem sublinhado */
+a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
+
+/* ---------- CABEÇALHO / NAVEGAÇÃO ---------- */
+#header {
+  position: fixed; /* Fixo no topo da página */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+  z-index: 100; /* Fica acima de todo o conteúdo */
+  transition: background-color 0.3s;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+/* Logo / Nome no cabeçalho */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+/* Menu de navegação */
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+.menu-link {
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.menu-link:hover {
+  color: var(--cor-primaria);
+}
+
+/* Link ativo (seção atual na tela) */
+.menu-link-ativo {
+  color: var(--cor-primaria);
+  font-weight: 600;
+}
+
+/* Botões do cabeçalho (tema e menu mobile) */
+.nav-botoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#btn-tema {
+  background: none;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#btn-tema:hover {
+  background-color: var(--cor-fundo-alt);
+}
+
+/* Botão hambúrguer (aparece só no celular) */
+.btn-hamburguer {
+  display: none; /* Escondido no desktop */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.btn-hamburguer span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--cor-texto);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ---------- SEÇÃO HERO (INÍCIO) ---------- */
+.hero {
+  padding-top: 120px; /* Espaço para o header fixo */
+  padding-bottom: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--cor-fundo) 0%, var(--cor-fundo-alt) 100%);
+}
+
+.hero-saudacao {
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+  margin-bottom: 10px;
+}
+
+.hero-nome {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-subtitulo {
+  font-size: 1.3rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 15px;
+}
+
+.hero-descricao {
+  font-size: 1rem;
+  color: var(--cor-texto-claro);
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.hero-botoes {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- BOTÕES ---------- */
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+  text-align: center;
+}
+
+.botao:hover {
+  transform: translateY(-2px); /* Efeito de "subir" ao passar o mouse */
+}
+
+/* Botão primário (fundo colorido) */
+.botao-primario {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.botao-primario:hover {
+  background-color: var(--cor-primaria-hover);
+  color: #ffffff;
+}
+
+/* Botão secundário (borda) */
+.botao-secundario {
+  background-color: transparent;
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+}
+
+.botao-secundario:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+/* Botão pequeno (usado nos cards de projeto) */
+.botao-pequeno {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.botao-pequeno:hover {
+  background-color: var(--cor-primaria-hover);
+  color: #ffffff;
+}
+
+/* Botão outline pequeno */
+.botao-outline {
+  background-color: transparent;
+  color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+}
+
+.botao-outline:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+/* Botão que ocupa toda a largura */
+.botao-full {
+  width: 100%;
+}
+
+/* ---------- SEÇÕES ---------- */
+.secao {
+  padding: 80px 0;
+}
+
+/* Fundo alternativo para algumas seções */
+.secao-cinza {
+  background-color: var(--cor-fundo-alt);
+}
+
+.secao-titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--cor-texto);
+}
+
+.secao-descricao {
+  text-align: center;
+  color: var(--cor-texto-claro);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- SEÇÃO SOBRE MIM ---------- */
+.sobre-conteudo {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.sobre-foto {
+  flex: 0 0 180px;
+}
+
+/* Foto de perfil (imagem real) */
+.sobre-imagem {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover; /* Recorta a imagem para preencher o círculo */
+  border: 3px solid var(--cor-primaria);
+}
+
+.sobre-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.sobre-texto h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--cor-texto);
+}
+
+.sobre-texto p {
+  margin-bottom: 12px;
+  color: var(--cor-texto-claro);
+}
+
+/* Cards de informação rápida */
+.sobre-info {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 12px 16px;
+  flex: 1;
+  min-width: 180px;
+  box-shadow: var(--sombra-card);
+}
+
+.info-item span {
+  font-size: 1.5rem;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--cor-texto);
+}
+
+.info-item p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--cor-texto-claro);
+}
+
+/* ---------- SEÇÃO FORMAÇÃO ---------- */
+.sub-titulo {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--cor-texto);
+  margin-top: 30px;
+}
+
+/* Cards de formação educacional */
+.formacao-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.formacao-card {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid var(--cor-primaria); /* Linha colorida na esquerda */
+  box-shadow: var(--sombra-card);
+}
+
+.formacao-data {
+  font-size: 0.85rem;
+  color: var(--cor-primaria);
+  font-weight: 600;
+}
+
+.formacao-card h4 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: var(--cor-texto);
+}
+
+.formacao-instituicao {
+  font-size: 0.9rem;
+  color: var(--cor-texto-claro);
+  font-style: italic;
+}
+
+.formacao-card p:last-child {
+  margin-top: 8px;
+  color: var(--cor-texto-claro);
+  font-size: 0.9rem;
+}
+
+/* Grid de cursos complementares */
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.curso-card {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--sombra-card);
+  transition: transform 0.2s;
+}
+
+.curso-card:hover {
+  transform: translateY(-3px); /* Sobe um pouco ao passar o mouse */
+}
+
+.curso-icone {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.curso-card h4 {
+  margin-bottom: 8px;
+  color: var(--cor-texto);
+}
+
+.curso-card p {
+  font-size: 0.85rem;
+  color: var(--cor-texto-claro);
+}
+
+/* Barras de progresso dos idiomas */
+.idiomas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+.idioma-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: var(--cor-texto);
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 10px;
+  background-color: var(--cor-borda);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barra-preenchida {
+  height: 100%;
+  background-color: var(--cor-primaria);
+  border-radius: 5px;
+  transition: width 0.5s;
+}
+
+/* ---------- SEÇÃO PORTFÓLIO ---------- */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Grid 2x2 para os 4 projetos */
+  gap: 25px;
+}
+
+.projeto-card {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--sombra-card);
+  transition: transform 0.2s;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Área da imagem/ícone do projeto */
+.projeto-imagem {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projeto-imagem span {
+  font-size: 3.5rem;
+}
+
+.projeto-info {
+  padding: 20px;
+}
+
+.projeto-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--cor-texto);
+}
+
+.projeto-info p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 12px;
+}
+
+/* Tags de tecnologias usadas no projeto */
+.projeto-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-primaria);
+  border-radius: 20px;
+  border: 1px solid var(--cor-borda);
+}
+
+.projeto-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------- SEÇÃO CONTATO ---------- */
+.contato-conteudo {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contato-info {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: var(--sombra-card);
+}
+
+.contato-item span {
+  font-size: 1.5rem;
+}
+
+.contato-item strong {
+  display: block;
+  color: var(--cor-texto);
+  font-size: 0.9rem;
+}
+
+.contato-item p {
+  font-size: 0.85rem;
+  color: var(--cor-texto-claro);
+  margin: 0;
+}
+
+/* Formulário de contato */
+#formulario-contato {
+  flex: 1;
+  min-width: 280px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--sombra-card);
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--cor-texto);
+}
+
+.obrigatorio {
+  color: #e74c3c; /* Vermelho para indicar campo obrigatório */
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria); /* Destaca a borda ao focar no campo */
+}
+
+/* Mensagem de erro de validação */
+.mensagem-erro {
+  display: block;
+  font-size: 0.8rem;
+  color: #e74c3c;
+  margin-top: 4px;
+  min-height: 18px; /* Reserva espaço para não "pular" o layout */
+}
+
+/* Borda vermelha quando o campo tem erro */
+.campo-invalido input,
+.campo-invalido textarea {
+  border-color: #e74c3c;
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fundo escuro semi-transparente do modal */
+.modal-fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo do modal */
+.modal-conteudo {
+  position: relative;
+  background-color: var(--cor-card);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-icone {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.modal-conteudo h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--cor-texto);
+}
+
+.modal-conteudo p {
+  color: var(--cor-texto-claro);
+  margin-bottom: 20px;
+}
+
+/* ---------- RODAPÉ ---------- */
+.rodape {
+  background-color: var(--cor-fundo-alt);
+  border-top: 1px solid var(--cor-borda);
+  padding: 25px 0;
+  text-align: center;
+}
+
+.rodape p {
+  font-size: 0.85rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 5px;
+}
+
+/* ---------- BOTÃO VOLTAR AO TOPO ---------- */
+.btn-topo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: none; /* Escondido por padrão, aparece com JavaScript */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  z-index: 50;
+}
+
+.btn-topo:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+/* ---------- RESPONSIVIDADE (CELULAR) ---------- */
+/* Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+
+  /* Menu fica oculto e aparece como menu vertical */
+  .menu {
+    display: none; /* Escondido por padrão no mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-borda);
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  /* Quando o menu está aberto */
+  .menu.menu-aberto {
+    display: flex;
+  }
+
+  /* Mostra o botão hambúrguer */
+  .btn-hamburguer {
+    display: flex;
+  }
+
+  /* Hero menor no celular */
+  .hero-nome {
+    font-size: 2.2rem;
+  }
+
+  /* Sobre mim: empilha foto e texto */
+  .sobre-conteudo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Contato: empilha info e formulário */
+  .contato-conteudo {
+    flex-direction: column;
+  }
+
+  /* Grid de projetos: uma coluna */
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+}

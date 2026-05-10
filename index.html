@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Configurações básicas da página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio pessoal de Jean Ferrer - Engenheiro de Machine Learning & Gen AI">
+  <title>Jean Ferrer | Portfólio Pessoal</title>
+
+  <!-- Fonte do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== CABEÇALHO COM MENU DE NAVEGAÇÃO ========== -->
+  <header id="header">
+    <div class="container nav-container">
+      <!-- Logo / Nome -->
+      <a href="#inicio" class="logo">Jean Ferrer</a>
+
+      <!-- Menu de navegação com âncoras para cada seção -->
+      <nav id="menu" class="menu">
+        <a href="#sobre" class="menu-link">Sobre Mim</a>
+        <a href="#formacao" class="menu-link">Formação</a>
+        <a href="#portfolio" class="menu-link">Portfólio</a>
+        <a href="#contato" class="menu-link">Contato</a>
+      </nav>
+
+      <!-- Botões de ação: tema e menu mobile -->
+      <div class="nav-botoes">
+        <!-- Botão para alternar entre tema claro e escuro -->
+        <button id="btn-tema" title="Alternar tema">🌙</button>
+
+        <!-- Botão hambúrguer para abrir o menu no celular -->
+        <button id="btn-menu" class="btn-hamburguer" title="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== SEÇÃO INÍCIO (HERO) ========== -->
+  <section id="inicio" class="secao hero">
+    <div class="container">
+      <h1 class="hero-nome">Jean Ferrer</h1>
+      <p class="hero-subtitulo">Engenheiro de ML &amp; Gen AI</p>
+      <p class="hero-descricao">Construindo sistemas end-to-end em Gen AI, ML, NLP e Big Data.</p>
+
+      <!-- Botões de ação -->
+      <div class="hero-botoes">
+        <a href="#portfolio" class="botao botao-primario">Ver Projetos</a>
+        <a href="#contato" class="botao botao-secundario">Fale Comigo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO SOBRE MIM ========== -->
+  <section id="sobre" class="secao">
+    <div class="container">
+
+      <div class="sobre-conteudo">
+        <!-- Área da foto de perfil -->
+        <div class="sobre-foto">
+          <img src="assets/avatar.jpg" alt="Foto de Jean Ferrer" class="sobre-imagem">
+        </div>
+
+        <!-- Texto de apresentação -->
+        <div class="sobre-texto">
+          <h3>Quem sou eu?</h3>
+          <p>
+            Sou Engenheiro de Machine Learning &amp; Generative AI pleno.
+          </p>
+          <p>
+            Trabalho com desenvolvimento e deploy de soluções de IA generativa, Machine Learning, Natural Language
+            Processing e Big Data na plataforma Google Cloud (GCP). Atuo em projetos de escala estadual e nacional, com
+            alcance de
+            milhões de usuários.
+          </p>
+          <p>
+            Especialista em Inteligência Artificial pela Universidade Tecnológica Federal do Paraná (UTFPR).
+            Google Cloud Platform Certified.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO FORMAÇÃO ========== -->
+  <section id="formacao" class="secao secao-cinza">
+    <div class="container">
+      <h2 class="secao-titulo">Formação</h2>
+
+      <!-- Formação educacional -->
+      <h3 class="sub-titulo">Educação</h3>
+      <div class="formacao-lista">
+        <div class="formacao-card">
+          <span class="formacao-data">2024 – 2025</span>
+          <h4>Pós-Graduação (Lato Sensu) em Inteligência Artificial</h4>
+          <p class="formacao-instituicao">UTFPR – Universidade Tecnológica Federal do Paraná</p>
+          <p>Especialização em Inteligência Artificial, com foco em técnicas de Machine Learning, Deep Learning, NLP e
+            aplicações práticas de IA.</p>
+        </div>
+        <div class="formacao-card">
+          <span class="formacao-data">2024 – Presente</span>
+          <h4>Ciência da Computação</h4>
+          <p class="formacao-instituicao">Uninter – Centro Universitário Internacional</p>
+          <p>Graduação em Ciência da Computação.</p>
+        </div>
+      </div>
+
+      <!-- Idiomas com barras de progresso -->
+      <h3 class="sub-titulo">Idiomas</h3>
+      <div class="idiomas-lista">
+        <div class="idioma">
+          <div class="idioma-info">
+            <span>Português</span>
+            <span>Fluente</span>
+          </div>
+          <div class="barra-progresso">
+            <div class="barra-preenchida" style="width: 100%;"></div>
+          </div>
+        </div>
+        <div class="idioma">
+          <div class="idioma-info">
+            <span>Inglês</span>
+            <span>Fluente</span>
+          </div>
+          <div class="barra-progresso">
+            <div class="barra-preenchida" style="width: 100%;"></div>
+          </div>
+        </div>
+        <div class="idioma">
+          <div class="idioma-info">
+            <span>Francês</span>
+            <span>Avançado</span>
+          </div>
+          <div class="barra-progresso">
+            <div class="barra-preenchida" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO PORTFÓLIO ========== -->
+  <section id="portfolio" class="secao">
+    <div class="container">
+      <h2 class="secao-titulo">Portfólio</h2>
+
+      <!-- Grid de projetos -->
+      <div class="projetos-grid">
+        <!-- Projeto 1: ADK AI Agents -->
+        <div class="projeto-card">
+          <div class="projeto-imagem" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+            <span>🤖</span>
+          </div>
+          <div class="projeto-info">
+            <h3>ADK AI Agents</h3>
+            <p>Pipeline de Machine Learning automatizada com múltiplos agentes de IA (Google ADK) que cria
+              modelos de classificação ou regressão de forma autônoma.</p>
+            <div class="projeto-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Google ADK</span>
+              <span class="tag">ML</span>
+            </div>
+            <div class="projeto-links">
+              <a href="https://github.com/jean-ferrer/adk-ai-agents" class="botao botao-pequeno" target="_blank"
+                rel="noopener">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 2: WikiRAG -->
+        <div class="projeto-card">
+          <div class="projeto-imagem" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+            <span>📚</span>
+          </div>
+          <div class="projeto-info">
+            <h3>WikiRAG</h3>
+            <p>Sistema de Retrieval-Augmented Generation (RAG) usando Wikipedia, LangChain, Sentence Transformers,
+              ChromaDB e FAISS para geração de respostas contextualizadas.</p>
+            <div class="projeto-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">RAG</span>
+              <span class="tag">FAISS</span>
+            </div>
+            <div class="projeto-links">
+              <a href="https://github.com/jean-ferrer/WikiRAG" class="botao botao-pequeno" target="_blank"
+                rel="noopener">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3: NLP E-commerce -->
+        <div class="projeto-card">
+          <div class="projeto-imagem" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+            <span>🛒</span>
+          </div>
+          <div class="projeto-info">
+            <h3>NLP E-commerce</h3>
+            <p>Análise de comentários negativos de e-commerce brasileiro com NLP e ML não-supervisionado, agrupando
+              textos e extraindo tópicos relevantes.</p>
+            <div class="projeto-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Clustering</span>
+            </div>
+            <div class="projeto-links">
+              <a href="https://github.com/jean-ferrer/NLP-E-commerce" class="botao botao-pequeno" target="_blank"
+                rel="noopener">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 4: Health Insurance US -->
+        <div class="projeto-card">
+          <div class="projeto-imagem" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+            <span>🏥</span>
+          </div>
+          <div class="projeto-info">
+            <h3>Health Insurance US</h3>
+            <p>Análise de dataset de seguros médicos e predição de custos usando MLPRegressor (rede neural) com base em
+              fatores como idade, IMC e região.</p>
+            <div class="projeto-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Neural Network</span>
+              <span class="tag">Análise de Dados</span>
+            </div>
+            <div class="projeto-links">
+              <a href="https://github.com/jean-ferrer/HealthInsuranceUS" class="botao botao-pequeno" target="_blank"
+                rel="noopener">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO CONTATO ========== -->
+  <section id="contato" class="secao secao-cinza">
+    <div class="container">
+      <h2 class="secao-titulo">Contato</h2>
+      <p class="secao-descricao">Gostaria de uma consultoria em IA, dados ou cloud? Ou quer trocar uma ideia? Entre em
+        contato!</p>
+
+      <div class="contato-conteudo">
+        <!-- Informações de contato -->
+        <div class="contato-info">
+          <div class="contato-item">
+            <span>📧</span>
+            <div>
+              <strong>E-mail</strong>
+              <p>jeanferrerdata@gmail.com</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <span>💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/jean-ricardo-ferrer/" target="_blank" rel="noopener">
+                <p>linkedin.com/in/jean-ricardo-ferrer</p>
+              </a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <span>🐙</span>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/jean-ferrer" target="_blank" rel="noopener">
+                <p>github.com/jean-ferrer</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário de contato com validação JavaScript -->
+        <form id="formulario-contato" novalidate>
+          <!-- Campo Nome -->
+          <div class="campo">
+            <label for="nome">Nome <span class="obrigatorio">*</span></label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            <span id="erro-nome" class="mensagem-erro"></span>
+          </div>
+
+          <!-- Campo E-mail -->
+          <div class="campo">
+            <label for="email">E-mail <span class="obrigatorio">*</span></label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            <span id="erro-email" class="mensagem-erro"></span>
+          </div>
+
+          <!-- Campo Mensagem -->
+          <div class="campo">
+            <label for="mensagem">Mensagem <span class="obrigatorio">*</span></label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."
+              required></textarea>
+            <span id="erro-mensagem" class="mensagem-erro"></span>
+          </div>
+
+          <!-- Botão de envio -->
+          <button type="submit" class="botao botao-primario botao-full">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MODAL DE CONFIRMAÇÃO DE ENVIO ========== -->
+  <!-- Esse modal aparece quando o formulário é enviado com sucesso -->
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-fundo"></div>
+    <div class="modal-conteudo">
+      <span class="modal-icone">✅</span>
+      <h3>Mensagem enviada com sucesso!</h3>
+      <p>Obrigado por entrar em contato. Retornarei o mais breve possível.</p>
+      <button id="btn-fechar-modal" class="botao botao-primario">Fechar</button>
+    </div>
+  </div>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2026 Jean Ferrer</p>
+    </div>
+  </footer>
+
+  <!-- Botão para voltar ao topo da página -->
+  <button id="btn-topo" class="btn-topo" title="Voltar ao topo">↑</button>
+
+  <!-- Arquivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+
+</html>
